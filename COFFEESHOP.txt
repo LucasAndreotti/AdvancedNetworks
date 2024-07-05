@@ -41,4 +41,89 @@ totalOrders OBJECT-TYPE
         "The total number of orders placed in the coffeeshop."
     ::= { items 2 }
 
+coffee OBJECT-TYPE
+     SYNTAX Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The total number of coffees ordered in the coffeeshop."
+    ::= { items 3 }
+
+tea OBJECT-TYPE
+     SYNTAX Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The total number of teas ordered in the coffeeshop."
+    ::= { items 4 }
+
+soda OBJECT-TYPE
+     SYNTAX Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The total number of sodas ordered in the coffeeshop."
+    ::= { items 5 }
+
+muffin OBJECT-TYPE
+     SYNTAX Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The total number of muffins ordered in the coffeeshop."
+    ::= { items 6 }
+
+sandwich OBJECT-TYPE
+     SYNTAX Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The total number of sandwiches ordered in the coffeeshop."
+    ::= { items 7 }
+
+pie OBJECT-TYPE
+     SYNTAX Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The total number of pies ordered in the coffeeshop."
+    ::= { items 8 }
+
+status OBJECT-TYPE
+     SYNTAX DisplayString (SIZE(0..255))
+     MAX-ACCESS read-write
+     STATUS current
+     DESCRIPTION
+        "The status of the coffeeshop (open or closed)."
+    ::= { items 9 }
+
+employeesTable OBJECT-TYPE
+     SYNTAX SEQUENCE OF Employee
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The cofeeshop employees list."
+    ::= { items 10 }
+
+employee OBJECT-TYPE
+     SYNTAX Employee
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "An employee."
+     INDEX { employeeName }
+    ::= { employeesTable 1 }
+
+Employee ::= SEQUENCE {
+                employeeName DisplayString (SIZE(0..255))
+        }
+
+employeeName OBJECT-TYPE
+     SYNTAX DisplayString (SIZE(0..255))
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The employee name."
+    ::= { employee 1 }
+
 END
