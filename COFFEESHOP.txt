@@ -1,0 +1,44 @@
+
+COFFEESHOP DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE,
+    Integer32, experimental
+        FROM SNMPv2-SMI
+    DisplayString
+        FROM SNMPv2-TC
+        ;
+
+coffee MODULE-IDENTITY
+     LAST-UPDATED "9803231700Z"
+     ORGANIZATION "The best coffeeshop in the world"
+
+     CONTACT-INFO
+            "        Gabriela Zorzo,
+                     Lucas Andreotti,
+                     Joana Figueredo
+             "
+     DESCRIPTION
+            "The MIB Module for the best coffeeshop."
+    ::= { experimental 1234 }
+
+items OBJECT IDENTIFIER ::= { coffee 1 }
+
+revenue OBJECT-TYPE
+     SYNTAX  Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+             "The total revenue of the coffeeshop."
+     ::= { items 1 }
+
+
+totalOrders OBJECT-TYPE
+     SYNTAX Integer32
+     MAX-ACCESS read-only
+     STATUS current
+     DESCRIPTION
+        "The total number of orders placed in the coffeeshop."
+    ::= { items 2 }
+
+END

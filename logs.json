@@ -1,0 +1,24 @@
+{
+    "revenue": 361,
+    "totalOrders": 48,
+    "coffee": 12,
+    "tea": 10,
+    "soda": 15,
+    "muffin": 5,
+    "sandwich": 6,
+    "pie": 0,
+    "employees": [
+        "Gabriela",
+        "Joana",
+        "Lucas"
+    ],
+    "priceTable": {
+        "coffee": 8,
+        "tea": 5,
+        "soda": 6,
+        "muffin": 7,
+        "sandwich": 15,
+        "pie": 12
+    },
+    "status": "Open"
+}
