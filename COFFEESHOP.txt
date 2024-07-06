@@ -98,32 +98,43 @@ status OBJECT-TYPE
     ::= { items 9 }
 
 employeesTable OBJECT-TYPE
-     SYNTAX SEQUENCE OF Employee
-     MAX-ACCESS read-only
-     STATUS current
-     DESCRIPTION
+    SYNTAX SEQUENCE OF Employee
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
         "The cofeeshop employees list."
     ::= { items 10 }
 
 employee OBJECT-TYPE
-     SYNTAX Employee
-     MAX-ACCESS read-only
-     STATUS current
-     DESCRIPTION
+    SYNTAX Employee
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
         "An employee."
-     INDEX { employeeName }
+    INDEX { employeeId }
     ::= { employeesTable 1 }
 
 Employee ::= SEQUENCE {
-                employeeName DisplayString (SIZE(0..255))
-        }
+    employeeId Integer,
+    employeeName DisplayString (SIZE(0..255))
+}
+
+employeeId OBJECT-TYPE
+    SYNTAX Integer
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
+        "The employee ID."
+    ::= { employee 1 }
 
 employeeName OBJECT-TYPE
-     SYNTAX DisplayString (SIZE(0..255))
-     MAX-ACCESS read-only
-     STATUS current
-     DESCRIPTION
+    SYNTAX DisplayString (SIZE(0..255))
+    MAX-ACCESS read-only
+    STATUS current
+    DESCRIPTION
         "The employee name."
-    ::= { employee 1 }
+    ::= { employee 2 }
+
+
 
 END

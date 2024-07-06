@@ -1,11 +1,11 @@
 {
-    "revenue": 361,
-    "totalOrders": 48,
-    "coffee": 12,
-    "tea": 10,
-    "soda": 15,
-    "muffin": 5,
-    "sandwich": 6,
+    "revenue": 83,
+    "totalOrders": 12,
+    "coffee": 6,
+    "tea": 3,
+    "soda": 1,
+    "muffin": 2,
+    "sandwich": 0,
     "pie": 0,
     "employees": [
         "Gabriela",
