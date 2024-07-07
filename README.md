@@ -166,7 +166,7 @@ snmpget -v2c -c public -M +. -m +COFFEESHOP localhost revenue.0
 
 ***set***
 ```bash
-snmpset -v2c -c private -M +. -m +COFFEESHOP localhost status.0 s "Open"
+snmpset -v2c -c private -M +. -m +COFFEESHOP localhost status.0 s Open
 
 # retorno: COFFEESHOP::status.0 = STRING: Open
 ```
