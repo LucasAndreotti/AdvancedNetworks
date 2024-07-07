@@ -39,8 +39,8 @@ def get_pie():
 def get_status():
     return readJson('status')
 
-def get_employees():
-    return readJson('employees')
+def get_employee(index):
+    return readJson('employees')[index]
 
 #set
 def set_status(new_status):
@@ -99,10 +99,18 @@ def main():
             print(".1.3.6.1.3.1234.1.9.0")
             print("string")
             print(get_status())
-        elif oid == ".1.3.6.1.3.1234.1.10.0":
-            print(".1.3.6.1.3.1234.1.10.0")
-            print("table")
-            print(get_employees())
+        elif oid == ".1.3.6.1.3.1234.1.10.1.2":
+            print(".1.3.6.1.3.1234.1.10.1.2")
+            print("string")
+            print(get_employee(0))
+        elif oid == ".1.3.6.1.3.1234.1.10.2.2":
+            print(".1.3.6.1.3.1234.1.10.2.2")
+            print("string")
+            print(get_employee(1))
+        elif oid == ".1.3.6.1.3.1234.1.10.3.2":
+            print(".1.3.6.1.3.1234.1.10.3.2")
+            print("string")
+            print(get_employee(2))
         else:
             print("NONE")
 
