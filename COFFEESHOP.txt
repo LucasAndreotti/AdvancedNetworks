@@ -9,7 +9,7 @@ IMPORTS
         FROM SNMPv2-TC
         ;
 
-coffee MODULE-IDENTITY
+coffeeMib MODULE-IDENTITY
      LAST-UPDATED "9803231700Z"
      ORGANIZATION "The best coffeeshop in the world"
 
@@ -22,7 +22,7 @@ coffee MODULE-IDENTITY
             "The MIB Module for the best coffeeshop."
     ::= { experimental 1234 }
 
-items OBJECT IDENTIFIER ::= { coffee 1 }
+items OBJECT IDENTIFIER ::= { coffeeMib 1 }
 
 revenue OBJECT-TYPE
      SYNTAX  Integer32
@@ -115,7 +115,7 @@ employee OBJECT-TYPE
     ::= { employeesTable 1 }
 
 Employee ::= SEQUENCE {
-    employeeId Integer,
+    employeeId Integer32,
     employeeName DisplayString (SIZE(0..255))
 }
 
