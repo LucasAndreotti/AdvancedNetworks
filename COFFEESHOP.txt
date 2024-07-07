@@ -115,7 +115,7 @@ employee OBJECT-TYPE
     ::= { employeesTable 1 }
 
 Employee ::= SEQUENCE {
-    employeeId Integer32,
+    employeeId Integer,
     employeeName DisplayString (SIZE(0..255))
 }
 

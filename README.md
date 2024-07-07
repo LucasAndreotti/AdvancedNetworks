@@ -163,3 +163,10 @@ snmpget -v2c -c public -M +. -m +COFFEESHOP localhost revenue.0
 
 # retorno: COFFEESHOP::revenue.0 = INTEGER: 104
 ```
+
+***set***
+```bash
+snmpset -v2c -c private -M +. -m +COFFEESHOP localhost status.0 s "Open"
+
+# retorno: COFFEESHOP::status.0 = STRING: Open
+```
