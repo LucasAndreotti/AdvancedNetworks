@@ -99,14 +99,26 @@ def main():
             print(".1.3.6.1.3.1234.1.9.0")
             print("string")
             print(get_status())
+        elif oid == ".1.3.6.1.3.1234.1.10.1.1":
+            print(".1.3.6.1.3.1234.1.10.1.1")
+            print("integer")
+            print(1)
         elif oid == ".1.3.6.1.3.1234.1.10.1.2":
             print(".1.3.6.1.3.1234.1.10.1.2")
             print("string")
             print(get_employee(0))
+        elif oid == ".1.3.6.1.3.1234.1.10.2.1":
+            print(".1.3.6.1.3.1234.1.10.2.1")
+            print("integer")
+            print(2)
         elif oid == ".1.3.6.1.3.1234.1.10.2.2":
             print(".1.3.6.1.3.1234.1.10.2.2")
             print("string")
             print(get_employee(1))
+        elif oid == ".1.3.6.1.3.1234.1.10.3.1":
+            print(".1.3.6.1.3.1234.1.10.3.1")
+            print("integer")
+            print(3)
         elif oid == ".1.3.6.1.3.1234.1.10.3.2":
             print(".1.3.6.1.3.1234.1.10.3.2")
             print("string")
@@ -122,6 +134,71 @@ def main():
             print(set_status(new_status))
         else:
             print("NONE")
+    
+    elif request_type == "-n":  # GETNEXT request  
+        if oid == ".1.3.6.1.3.1234.1.1":
+            print(".1.3.6.1.3.1234.1.1.0")
+            print("integer")
+            print(get_revenue())
+        elif oid == ".1.3.6.1.3.1234.1.1.0" or oid == ".1.3.6.1.3.1234.1.2":
+            print(".1.3.6.1.3.1234.1.2.0")
+            print("integer")
+            print(get_total_orders())
+        elif oid == ".1.3.6.1.3.1234.1.2.0" or oid == ".1.3.6.1.3.1234.1.3":
+            print(".1.3.6.1.3.1234.1.3.0")
+            print("integer")
+            print(get_coffee())
+        elif oid == ".1.3.6.1.3.1234.1.3.0" or oid == ".1.3.6.1.3.1234.1.4":
+            print(".1.3.6.1.3.1234.1.4.0")
+            print("integer")
+            print(get_tea())
+        elif oid == ".1.3.6.1.3.1234.1.4.0" or oid == ".1.3.6.1.3.1234.1.4":
+            print(".1.3.6.1.3.1234.1.5.0")
+            print("integer")
+            print(get_soda())
+        elif oid == ".1.3.6.1.3.1234.1.5.0" or oid == ".1.3.6.1.3.1234.1.6":
+            print(".1.3.6.1.3.1234.1.6.0")
+            print("integer")
+            print(get_muffin())
+        elif oid == ".1.3.6.1.3.1234.1.6.0" or oid == ".1.3.6.1.3.1234.1.7":
+            print(".1.3.6.1.3.1234.1.7.0")
+            print("integer")
+            print(get_sandwich())
+        elif oid == ".1.3.6.1.3.1234.1.7.0" or oid == ".1.3.6.1.3.1234.1.8":
+            print(".1.3.6.1.3.1234.1.8.0")
+            print("integer")
+            print(get_pie())
+        elif oid == ".1.3.6.1.3.1234.1.8.0" or oid == ".1.3.6.1.3.1234.1.9":
+            print(".1.3.6.1.3.1234.1.9.0")
+            print("string")
+            print(get_status())
+        elif oid == ".1.3.6.1.3.1234.1.10.1" or oid == '.1.3.6.1.3.1234.1.10' or oid == ".1.3.6.1.3.1234.1.9.0":
+            print(".1.3.6.1.3.1234.1.10.1.1")
+            print("integer")
+            print(1)
+        elif oid == ".1.3.6.1.3.1234.1.10.3.1":
+            print(".1.3.6.1.3.1234.1.10.1.2")
+            print("string")
+            print(get_employee(0))
+        elif oid == ".1.3.6.1.3.1234.1.10.1.1" or oid == ".1.3.6.1.3.1234.1.10.2":
+            print(".1.3.6.1.3.1234.1.10.2.1")
+            print("integer")
+            print(2)
+        elif oid == ".1.3.6.1.3.1234.1.10.1.2":
+            print(".1.3.6.1.3.1234.1.10.2.2")
+            print("string")
+            print(get_employee(1))
+        elif oid == ".1.3.6.1.3.1234.1.10.2.1" or oid == ".1.3.6.1.3.1234.1.10.3":
+            print(".1.3.6.1.3.1234.1.10.3.1")
+            print("integer")
+            print(3)
+        elif oid == ".1.3.6.1.3.1234.1.10.2.2":
+            print(".1.3.6.1.3.1234.1.10.3.2")
+            print("string")
+            print(get_employee(2))
+        else:
+            print("NONE")
+
     else:
         print("NONE")
 

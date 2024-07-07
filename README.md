@@ -103,7 +103,7 @@ Employee ::= SEQUENCE {
 
 ### Agente
 
-O agente implementado faz a leitura do arquivo *logs.json* para retornar o valor solicitado do elemento gerenciado de acordo com o OID do objeto. Ele suporta os comandos de *get* e *set*.
+O agente implementado faz a leitura do arquivo *logs.json* para retornar o valor solicitado do elemento gerenciado de acordo com o OID do objeto. Ele suporta os comandos de *get*, *getnext* e *set*.
 
 Os elementos gerenciados, seus respectivos OIDs e comandos suportados:
 - *revenue*: .1.3.6.1.3.1234.1.1.0 (*get*)
@@ -122,6 +122,10 @@ Para executar somente o agente, podem ser executados os seguintes comandos no te
 *get*
 ```bash
 python agent.py -g .1.3.6.1.3.1234.1.9.0
+```
+*getnext*
+```bash
+python agent.py -n .1.3.6.1.3.1234.1.9.0
 ```
 *set*
 ```bash
@@ -148,6 +152,13 @@ snmpget -v2c -c public localhost .1.3.6.1.3.1234.1.1.0
 
 # retorno: SNMPv2-SMI::experimental.1234.1.1.0 = INTEGER: 104
 ```
+***getnext***
+```bash
+# primeiro ínidice da tabela
+snmpgetnext -v2c -c public localhost .1.3.6.1.3.1234.1.10
+
+# retorno: SNMPv2-SMI::experimental.1234.1.10.1.1 = INTEGER: 1
+```
 ***set***
 ```bash
 snmpset -v2c -c private localhost .1.3.6.1.3.1234.1.9.0 s Close
@@ -163,7 +174,13 @@ snmpget -v2c -c public -M +. -m +COFFEESHOP localhost revenue.0
 
 # retorno: COFFEESHOP::revenue.0 = INTEGER: 104
 ```
+***getnext***
+```bash
+# primeiro ínidice da tabela
+snmpgetnext -v2c -c public -M +. -m +COFFEESHOP localhost employeesTable
 
+# retorno: COFFEESHOP::employeeId = INTEGER: 1
+```
 ***set***
 ```bash
 snmpset -v2c -c private -M +. -m +COFFEESHOP localhost status.0 s Open
