@@ -54,7 +54,6 @@ while(True):
         items[4] : itemsNumber[4],
         items[5] : itemsNumber[5],
         "employees" : employees,
-        "priceTable" : priceTable,
         "status" : status
     }
 

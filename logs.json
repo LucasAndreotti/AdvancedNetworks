@@ -1,9 +1,9 @@
 {
-    "revenue": 8,
+    "revenue": 6,
     "totalOrders": 1,
-    "coffee": 1,
+    "coffee": 0,
     "tea": 0,
-    "soda": 0,
+    "soda": 1,
     "muffin": 0,
     "sandwich": 0,
     "pie": 0,
@@ -12,13 +12,5 @@
         "Joana",
         "Lucas"
     ],
-    "priceTable": {
-        "coffee": 8,
-        "tea": 5,
-        "soda": 6,
-        "muffin": 7,
-        "sandwich": 15,
-        "pie": 12
-    },
-    "status": "Open"
+    "status": "Close"
 }
