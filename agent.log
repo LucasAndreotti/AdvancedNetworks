@@ -3,3 +3,26 @@ testAgent.py -g .1.3.6.1.3.1234.1.1.0
 testAgent.py -g .1.3.6.1.3.1234.1.1.0
 testAgent.py -g .1.3.6.1.3.1234.1.1.0
 testAgent.py -g .1.3.6.1.3.1234.1.2.0
+testAgent.py -g .1.3.6.1.3.1234.1.9.0
+testAgent.py -g .1.3.6.1.3.1234.1.9.0
+testAgent.py -g .1.3.6.1.3.1234.1.9.0
+testAgent.py -g .1.3.6.1.3.1234.1.9.0
+testAgent.py -g .1.3.6.1.3.1234.1.9.0
+testAgent.py -g .1.3.6.1.3.1234.1.9.0
+testAgent.py -s .1.3.6.1.3.1234.1.9.0 s teste
+testAgent.py -s .1.3.6.1.3.1234.1.9.0 s teste
+testAgent.py -s .1.3.6.1.3.1234.1.9.0 s TESTE
+testAgent.py -g .1.3.6.1.3.1234.1.9.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.1.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.2.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.3.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.4.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.5.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.6.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.7.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.8.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.9.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.10.0
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.9.0
+/workspaces/AdvancedNetworks/testAgent.py -s .1.3.6.1.3.1234.1.9.0 string VAMO
+/workspaces/AdvancedNetworks/testAgent.py -g .1.3.6.1.3.1234.1.9.0

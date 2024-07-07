@@ -1,11 +1,11 @@
 {
-    "revenue": 83,
-    "totalOrders": 12,
-    "coffee": 6,
-    "tea": 3,
-    "soda": 1,
-    "muffin": 2,
-    "sandwich": 0,
+    "revenue": 1131,
+    "totalOrders": 142,
+    "coffee": 26,
+    "tea": 23,
+    "soda": 43,
+    "muffin": 25,
+    "sandwich": 25,
     "pie": 0,
     "employees": [
         "Gabriela",
@@ -20,5 +20,5 @@
         "sandwich": 15,
         "pie": 12
     },
-    "status": "Open"
+    "status": "VAMO"
 }

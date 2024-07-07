@@ -9,6 +9,8 @@ def readJson(obj):
     f.close
     return data[obj]
 
+#get
+
 def get_revenue():
     return readJson('revenue')
 
@@ -28,16 +30,25 @@ def get_muffin():
     return readJson('muffin')
 
 def get_sandwich():
-    return 2
+    return readJson('sandwich')
 
 def get_pie():
-    return 1
+    return readJson('pie')
 
 def get_status():
-    return "Open"
+    return readJson('status')
 
 def get_employees():
     return ["Gabriela","Lucas","Joana"]
+
+#set
+def set_status(new_status):
+    filepath = '/workspaces/AdvancedNetworks/status.txt'
+    with open(filepath, 'w+') as f:
+        f.write(new_status)
+    return new_status
+
+#getnext 
 
 def main():
 
@@ -45,7 +56,7 @@ def main():
         file.write(' '.join(sys.argv)+"\n")
 
     # readJson()
-    if len(sys.argv) != 3:
+    if len(sys.argv) < 3:
         print("Usage: agent.py <request-type> <MIB-oid>")
         return
 
@@ -95,8 +106,25 @@ def main():
             print(get_employees())
         else:
             print("NONE")
+
+    elif request_type == "-s":  # SET request
+        if oid == ".1.3.6.1.3.1234.1.9.0" and len(sys.argv) == 5: # agent.py <request-type> <MIB-oid> [type] [<new-value>]
+            new_status = sys.argv[4]
+            print(".1.3.6.1.3.1234.1.9.0")
+            print("string")
+            print(set_status(new_status))
+        else:
+            print("NONE")
     else:
         print("NONE")
 
 if __name__ == "__main__":
     main()
+
+
+# get test 
+# sudo python testAgent.py -g .1.3.6.1.3.1234.1.9.0
+
+# set test
+# sudo python testAgent.py -s .1.3.6.1.3.1234.1.9.0 s teste
+# snmpset -v2c -c private localhost .1.3.6.1.3.1234.1.9.0 s teste

@@ -1,6 +1,8 @@
 from random import randrange
 import time
 import json
+import sys
+import os
 
 # Funcionários
 employees = ["Gabriela","Joana","Lucas"]
@@ -23,6 +25,10 @@ totalValue = 0
 # Status
 status = "Open"
 
+filepath = '/workspaces/AdvancedNetworks/status.txt'
+if not os.path.exists(filepath):
+    with open(filepath, 'w') as f:
+        f.write(status)
 
 while(True):
     index = randrange(0,5)
@@ -32,6 +38,9 @@ while(True):
     orders += 1
     totalValue += value
     itemsNumber[index] += 1
+
+    with open(filepath, 'r') as f:
+        status = f.read()
 
     log = {
         "revenue" : totalValue,
@@ -48,7 +57,7 @@ while(True):
     }
 
     # print(log)
-   
+
     json_object = json.dumps(log, indent=4)
     
     with open("/workspaces/AdvancedNetworks/logs.json", "w") as outfile:
