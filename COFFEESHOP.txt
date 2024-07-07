@@ -120,7 +120,7 @@ Employee ::= SEQUENCE {
 }
 
 employeeId OBJECT-TYPE
-    SYNTAX Integer
+    SYNTAX Integer32
     MAX-ACCESS read-only
     STATUS current
     DESCRIPTION
