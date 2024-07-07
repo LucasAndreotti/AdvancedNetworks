@@ -12,7 +12,6 @@ def readJson(obj):
     return data[obj]
 
 #get
-
 def get_revenue():
     return readJson('revenue')
 
@@ -50,8 +49,6 @@ def set_status(new_status):
         f.write(new_status)
     return new_status
 
-#getnext 
-
 def main():
 
     with open(PATH+"agent.log", 'a') as file:
@@ -65,7 +62,7 @@ def main():
     request_type = sys.argv[1]
     oid = sys.argv[2]
 
-    if request_type == "-g":  # GET request # -s é set, -g 
+    if request_type == "-g":  # GET request  
         if oid == ".1.3.6.1.3.1234.1.1.0":
             print(".1.3.6.1.3.1234.1.1.0")
             print("integer")
