@@ -105,17 +105,22 @@ Employee ::= SEQUENCE {
 
 O agente implementado faz a leitura do arquivo *logs.json* para retornar o valor solicitado do elemento gerenciado de acordo com o OID do objeto. Ele suporta os comandos de *get*, *getnext* e *set*.
 
-Os elementos gerenciados, seus respectivos OIDs e comandos suportados:
-- *revenue*: .1.3.6.1.3.1234.1.1.0 (*get*)
-- *totalOrders*: .1.3.6.1.3.1234.1.2.0 (*get*)
-- *coffee*: .1.3.6.1.3.1234.1.3.0 (*get*)
-- *tea*: .1.3.6.1.3.1234.1.4.0 (*get*)
-- *soda*: .1.3.6.1.3.1234.1.5.0 (*get*)
-- *muffin*: .1.3.6.1.3.1234.1.6.0 (*get*)
-- *sandwich*: .1.3.6.1.3.1234.1.7.0 (*get*)
-- *pie*: .1.3.6.1.3.1234.1.8.0 (*get*)
-- *status*: .1.3.6.1.3.1234.1.9.0 (*get* e *set*)
-- *employees*: .1.3.6.1.3.1234.1.10.0 (*get* - no índice)
+Os elementos gerenciados, seus respectivos OIDs:
+- *revenue*: .1.3.6.1.3.1234.1.1.0 
+- *totalOrders*: .1.3.6.1.3.1234.1.2.0 
+- *coffee*: .1.3.6.1.3.1234.1.3.0 
+- *tea*: .1.3.6.1.3.1234.1.4.0 
+- *soda*: .1.3.6.1.3.1234.1.5.0 
+- *muffin*: .1.3.6.1.3.1234.1.6.0 
+- *sandwich*: .1.3.6.1.3.1234.1.7.0 
+- *pie*: .1.3.6.1.3.1234.1.8.0 
+- *status*: .1.3.6.1.3.1234.1.9.0 
+- *employeesTable*: .1.3.6.1.3.1234.1.10
+- *employee*: .1.3.6.1.3.1234.1.10.1
+- *employeeId*: .1.3.6.1.3.1234.1.10.1.1 
+- *employeeName*: .1.3.6.1.3.1234.1.10.1.2 
+
+Todos os elementos suportam os comandos *get* e *getnext*. Para acessar os elementos da tabela *employeeTable* é necessário acessar o objeto final, dado pelo número da linha seguido do número da coluna: .1.3.6.1.3.1234.1.10.{*numLinha*}.{*numColuna*}. O elemento *status* suporta também o comando *set*.
 
 Para executar somente o agente, podem ser executados os seguintes comandos no terminal:
 
