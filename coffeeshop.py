@@ -4,6 +4,8 @@ import json
 import sys
 import os
 
+PATH = '/workspaces/RedesAvancT2/'
+
 # Funcionários
 employees = ["Gabriela","Joana","Lucas"]
 
@@ -25,7 +27,7 @@ totalValue = 0
 # Status
 status = "Open"
 
-filepath = '/workspaces/AdvancedNetworks/status.txt'
+filepath = PATH+'status.txt'
 if not os.path.exists(filepath):
     with open(filepath, 'w') as f:
         f.write(status)
@@ -60,7 +62,7 @@ while(True):
 
     json_object = json.dumps(log, indent=4)
     
-    with open("/workspaces/AdvancedNetworks/logs.json", "w") as outfile:
+    with open(PATH+"logs.json", "w") as outfile:
         outfile.write(json_object)
         outfile.close()
 

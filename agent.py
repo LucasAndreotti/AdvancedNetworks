@@ -3,8 +3,10 @@ import datetime
 import socket
 import json
 
+PATH = '/workspaces/RedesAvancT2/'
+
 def readJson(obj):
-    f = open('/workspaces/AdvancedNetworks/logs.json')
+    f = open(PATH+'logs.json')
     data = json.load(f)
     f.close
     return data[obj]
@@ -39,11 +41,11 @@ def get_status():
     return readJson('status')
 
 def get_employees():
-    return ["Gabriela","Lucas","Joana"]
+    return readJson('employees')
 
 #set
 def set_status(new_status):
-    filepath = '/workspaces/AdvancedNetworks/status.txt'
+    filepath = PATH + 'status.txt'
     with open(filepath, 'w+') as f:
         f.write(new_status)
     return new_status
@@ -52,7 +54,7 @@ def set_status(new_status):
 
 def main():
 
-    with open("/workspaces/AdvancedNetworks/agent.log", 'a') as file:
+    with open(PATH+"agent.log", 'a') as file:
         file.write(' '.join(sys.argv)+"\n")
 
     # readJson()
@@ -123,8 +125,8 @@ if __name__ == "__main__":
 
 
 # get test 
-# sudo python testAgent.py -g .1.3.6.1.3.1234.1.9.0
+# sudo python agent.py -g .1.3.6.1.3.1234.1.9.0
 
 # set test
-# sudo python testAgent.py -s .1.3.6.1.3.1234.1.9.0 s teste
+# sudo python agent.py -s .1.3.6.1.3.1234.1.9.0 s teste
 # snmpset -v2c -c private localhost .1.3.6.1.3.1234.1.9.0 s teste
