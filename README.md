@@ -170,3 +170,5 @@ snmpset -v2c -c private -M +. -m +COFFEESHOP localhost status.0 s Open
 
 # retorno: COFFEESHOP::status.0 = STRING: Open
 ```
+
+Mais exemplos podem ser vistos no arquivo *SNMP.ipynb*.
