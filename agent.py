@@ -3,8 +3,7 @@ import datetime
 import socket
 import json
 
-# PATH = '/workspaces/RedesAvancT2/'
-PATH = '/workspaces/AdvancedNetworks/'
+PATH = '/workspaces/RedesAvancT2/'
 
 def readJson(obj):
     f = open(PATH+'logs.json')
@@ -126,23 +125,6 @@ def main():
             print(".1.3.6.1.3.1234.1.10.1.2.3")
             print("string")
             print(get_employee(2))
-
-        # elif oid == ".1.3.6.1.3.1234.1.10.2.1": #não existe
-        #     print(".1.3.6.1.3.1234.1.10.2.1")
-        #     print("integer")
-        #     print(2)
-        # elif oid == ".1.3.6.1.3.1234.1.10.2.2":
-        #     print(".1.3.6.1.3.1234.1.10.2.2")
-        #     print("string")
-        #     print(get_employee(1))
-        # elif oid == ".1.3.6.1.3.1234.1.10.3.1":
-        #     print(".1.3.6.1.3.1234.1.10.3.1")
-        #     print("integer")
-        #     print(3)
-        # elif oid == ".1.3.6.1.3.1234.1.10.3.2":
-        #     print(".1.3.6.1.3.1234.1.10.3.2")
-        #     print("string")
-        #     print(get_employee(2))
         else:
             print("NONE")
 
@@ -192,28 +174,28 @@ def main():
             print(".1.3.6.1.3.1234.1.9.0")
             print("string")
             print(get_status())
-        elif oid == ".1.3.6.1.3.1234.1.10.1" or oid == '.1.3.6.1.3.1234.1.10' or oid == ".1.3.6.1.3.1234.1.9.0":
-            print(".1.3.6.1.3.1234.1.10.1.1")
+        elif oid == ".1.3.6.1.3.1234.1.10.1.1" or oid == ".1.3.6.1.3.1234.1.10.1" or oid == '.1.3.6.1.3.1234.1.10' or oid == ".1.3.6.1.3.1234.1.9.0":
+            print(".1.3.6.1.3.1234.1.10.1.1.1")
             print("integer")
             print(1)
-        elif oid == ".1.3.6.1.3.1234.1.10.3.1":
-            print(".1.3.6.1.3.1234.1.10.1.2")
-            print("string")
-            print(get_employee(0))
-        elif oid == ".1.3.6.1.3.1234.1.10.1.1" or oid == ".1.3.6.1.3.1234.1.10.2":
-            print(".1.3.6.1.3.1234.1.10.2.1")
+        elif oid == ".1.3.6.1.3.1234.1.10.1.1.1":
+            print(".1.3.6.1.3.1234.1.10.1.1.2")
             print("integer")
             print(2)
-        elif oid == ".1.3.6.1.3.1234.1.10.1.2":
-            print(".1.3.6.1.3.1234.1.10.2.2")
-            print("string")
-            print(get_employee(1))
-        elif oid == ".1.3.6.1.3.1234.1.10.2.1" or oid == ".1.3.6.1.3.1234.1.10.3":
-            print(".1.3.6.1.3.1234.1.10.3.1")
+        elif oid == ".1.3.6.1.3.1234.1.10.1.1.2":
+            print(".1.3.6.1.3.1234.1.10.1.1.3")
             print("integer")
             print(3)
-        elif oid == ".1.3.6.1.3.1234.1.10.2.2":
-            print(".1.3.6.1.3.1234.1.10.3.2")
+        elif oid == ".1.3.6.1.3.1234.1.10.1.1.3" or oid == ".1.3.6.1.3.1234.1.10.1.2":
+            print(".1.3.6.1.3.1234.1.10.1.2.1")
+            print("string")
+            print(get_employee(0))
+        elif oid == ".1.3.6.1.3.1234.1.10.1.2.1":
+            print(".1.3.6.1.3.1234.1.10.1.2.2")
+            print("string")
+            print(get_employee(1))
+        elif oid == ".1.3.6.1.3.1234.1.10.1.2.2":
+            print(".1.3.6.1.3.1234.1.10.1.2.3")
             print("string")
             print(get_employee(2))
         else:

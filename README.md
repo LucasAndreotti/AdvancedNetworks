@@ -120,7 +120,7 @@ Os elementos gerenciados, seus respectivos OIDs:
 - *employeeId*: .1.3.6.1.3.1234.1.10.1.1 
 - *employeeName*: .1.3.6.1.3.1234.1.10.1.2 
 
-Todos os elementos suportam os comandos *get* e *getnext*. Para acessar os elementos da tabela *employeeTable* é necessário acessar o objeto final, dado pelo número da linha seguido do número da coluna: .1.3.6.1.3.1234.1.10.{*numLinha*}.{*numColuna*}. O elemento *status* suporta também o comando *set*.
+Todos os elementos suportam os comandos *get* e *getnext*. Para acessar os elementos da tabela *employeeTable* é necessário acessar o objeto final, dado pelo número do objeto *employee*, o número do parâmetro desejado (*employeeId* ou *employeeName*), seguido do número da linha: .1.3.6.1.3.1234.1.10.1.{*employeeId|employeeName*}.{*numLinha*}. O elemento *status* suporta também o comando *set*.
 
 Para executar somente o agente, podem ser executados os seguintes comandos no terminal:
 
