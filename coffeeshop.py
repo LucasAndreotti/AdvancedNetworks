@@ -4,7 +4,8 @@ import json
 import sys
 import os
 
-PATH = '/workspaces/RedesAvancT2/'
+# PATH = '/workspaces/RedesAvancT2/'
+PATH = '/workspaces/AdvancedNetworks/'
 
 # Funcionários
 employees = ["Gabriela","Joana","Lucas"]

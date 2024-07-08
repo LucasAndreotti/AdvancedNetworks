@@ -1,16 +1,16 @@
 {
-    "revenue": 6,
-    "totalOrders": 1,
-    "coffee": 0,
-    "tea": 0,
-    "soda": 1,
-    "muffin": 0,
-    "sandwich": 0,
+    "revenue": 189,
+    "totalOrders": 21,
+    "coffee": 5,
+    "tea": 3,
+    "soda": 5,
+    "muffin": 2,
+    "sandwich": 6,
     "pie": 0,
     "employees": [
         "Gabriela",
         "Joana",
         "Lucas"
     ],
-    "status": "Close"
+    "status": "Open"
 }
